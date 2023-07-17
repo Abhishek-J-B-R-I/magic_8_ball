@@ -29,16 +29,38 @@ class _magic_8_ballState extends State<magic_8_ball> {
             child: Text('Ask Me Anything'),
           ),
         ),
-        body: Expanded(
+        body: Center(
+          child: Row(
+            children: [
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                    setState(() {
+                      magic();
+                    });
+                  },
+                  child: Image(
+                    image: AssetImage('images/ball$n.png'),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        /*Expanded(
           child: TextButton(
             onPressed: () {
               setState(() {
                 magic();
               });
             },
-            child: Image(image: AssetImage('images/ball$n.png')),
+            child: Image(
+              image: AssetImage('images/ball1.png'),
+              height: 100,
+              width: 100,
+            ),
           ),
-        ),
+        ),*/
       ),
     );
   }
